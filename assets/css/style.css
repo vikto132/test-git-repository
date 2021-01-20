@@ -166,11 +166,26 @@ body {
     .bottom {
         align-items: center;
     }
+    .top__content__playgame {
+        max-width: 100%;
+        text-align: center;
+        order: 3;
+    }
+    .top__content__shopping_one {
+        order: 1;
+    }
+    .top__content__shopping_two {
+        order: 2;
+    }
     .middle__title {
         margin: 10vh 0 0 0;
     }
     .middle__content {
         padding-top: 20vh;
+    }
+    .middle__content__coc {
+        text-align: center;
+        max-width: 100%;
     }
     .middle__content__coc img {
         max-width: 440px;
