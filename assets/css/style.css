@@ -1,0 +1,241 @@
+* {
+    background-repeat: no-repeat;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.background {
+    background-image: url('../../html/images/background.png');
+    background-size: cover;
+    padding-top: 0.02em;
+    padding-left: 0.05em;
+    background-position: center;
+    /* position: relative; */
+}
+
+.container {
+    /* position: absolute;
+    max-width: 1715px; */
+    padding: 0;
+    /* border: 1px black solid; */
+    /* top: 0;
+    left: 50%;
+    transform: translateX(-50%); */
+}
+
+.top {
+    margin: 0;
+    padding: 0;
+}
+
+.top__nav {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2em;
+}
+
+.top__nav__logo_one {
+    margin-top: -2em;
+}
+
+.top__nav__button {
+    margin-top: 2em;
+}
+
+.btn__login,
+.btn__regis {
+    background-color: transparent;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13pt;
+}
+
+.btn__login {
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+
+.btn__regis {
+    color: #b2218c;
+    border: 1px solid #b2218c;
+    border-radius: 10px;
+    padding: 5px 30px;
+    max-width: 140px;
+}
+
+.top__title {
+    max-width: 47vw;
+    margin: 0 auto;
+}
+
+.top__content {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 20px;
+    margin-top: 10em;
+}
+
+.top__content__shopping_one img {
+    width: 130%;
+}
+
+.top__content__playgame {
+    max-width: 456px;
+}
+
+.middle {
+    /* border: 1px solid black; */
+    margin: 0;
+    padding: 0;
+    padding-top: 12em;
+}
+
+.middle__title {
+    text-align: center;
+    margin: 0 0 6rem 0;
+}
+
+.middle__title h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 5em;
+    color: #b2218c;
+    font-weight: bold;
+    text-transform: capitalize;
+    text-shadow: 2px 2px white;
+}
+
+.middle__content {
+    /* padding-left: 5rem; */
+}
+
+.middle__content__coc img {
+    /* max-width: 550px; */
+}
+
+.bottom {
+    margin: 15rem auto 15rem;
+    max-width: 1317px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.bottom__rule__title {
+    width: auto;
+    max-width: 400px;
+}
+
+.bottom__rule__title h1 {
+    color: #8f1665;
+    text-transform: capitalize;
+    font-family: 'Oswald', sans-serif;
+}
+
+.bottom__rule__title hr {
+    /* border: 1px solid #8f1665; */
+    background-color: #8f1665;
+}
+
+.bottom__rule__content {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.5em;
+}
+
+.bottom__game {
+    padding-bottom: 5rem;
+}
+
+.btn_menu {
+    display: none;
+}
+
+@media (min-width:1840px) {
+    .background {
+        background-size: cover;
+    }
+}
+
+@media (max-width: 1024px) {
+    .bottom {
+        align-items: center;
+    }
+    .middle__title {
+        margin: 10vh 0 0 0;
+    }
+    .middle__content {
+        padding-top: 20vh;
+    }
+    .middle__content__coc img {
+        max-width: 440px;
+    }
+}
+
+@media(max-width: 540px) {
+    .top__title {
+        max-width: 100%;
+    }
+    .btn_menu {
+        display: block;
+        color: white;
+        width: 50px;
+        border-radius: 10px;
+        background-color: #ffffff36;
+    }
+    .btn__login,
+    .btn__regis {
+        display: none;
+        position: absolute;
+    }
+    .top__nav__button {
+        position: relative;
+    }
+    .top__nav__button:hover .btn__login,
+    .top__nav__button:hover .btn__regis {
+        display: block;
+        font-size: 15px;
+        width: 100px;
+        background-color: #ffffff91;
+    }
+    .top__nav__button:hover .btn__regis {
+        padding: 0;
+        margin: 30px 0;
+    }
+    .top__nav__button:hover .btn__login {
+        color: #b2218c;
+        border: 1px solid #b2218c;
+        border-radius: 10px;
+        margin: 2px 0;
+    }
+    .middle__content img {
+        margin: 30px 0;
+    }
+    .bottom div {
+        width: 100vw;
+        padding: 0;
+        display: block;
+    }
+    .bottom__rule__content,
+    .bottom__rule__title {
+        width: 100%;
+    }
+}
+
+@media (min-width:0px) {
+    .btn__login:hover {
+        background-color: #ffffff36;
+    }
+    .btn__regis:hover {
+        border: 1px solid #b31689;
+    }
+    .btn__login:focus,
+    .btn__regis:focus {
+        border: #b31689;
+    }
+}
