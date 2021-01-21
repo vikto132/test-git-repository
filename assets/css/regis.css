@@ -1,0 +1,11 @@
+.box {
+    max-width: 650px;
+    max-height: 350px;
+    border: 1px solid black;
+    margin: 0 auto;
+}
+
+.box img {
+    max-width: 650px;
+    max-height: 350px;
+}
