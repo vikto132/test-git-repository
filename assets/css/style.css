@@ -48,6 +48,7 @@ body {
 
 .top__nav__button {
     margin-top: 2em;
+    font-weight: 300;
 }
 
 .btn__login,
@@ -192,10 +193,7 @@ body {
     }
 }
 
-@media(max-width: 540px) {
-    .top__title {
-        max-width: 100%;
-    }
+@media(max-width:768px) {
     .btn_menu {
         display: block;
         color: white;
@@ -227,6 +225,36 @@ body {
         border: 1px solid #b2218c;
         border-radius: 10px;
         margin: 2px 0;
+    }
+    .top__nav {
+        padding-top: 2vh;
+    }
+    .top__nav__button {
+        font-weight: 300;
+        width: 14vw;
+    }
+    .btn__login {
+        width: 10vw;
+        font-size: 1.7vw;
+    }
+    .btn__regis {
+        width: 10vw;
+        font-size: 1.7vw;
+        padding: 0;
+    }
+    .top__nav__logo_one {
+        margin-top: 0;
+        width: 25vw;
+    }
+    .top__nav__logo_two {
+        width: 15vw;
+        margin-top: 2vh
+    }
+}
+
+@media(max-width: 540px) {
+    .top__title {
+        max-width: 100%;
     }
     .middle__content img {
         margin: 30px 0;
