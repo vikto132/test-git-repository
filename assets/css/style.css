@@ -277,8 +277,13 @@ body {
     .btn__regis:hover {
         border: 1px solid #b31689;
     }
-    .btn__login:focus,
-    .btn__regis:focus {
+    .btn__regis:focus,
+    .btn__login:focus-visible,
+    .btn__login:focus-within {
+        outline: none;
+    }
+    .btn__login:focus {
+        outline: none;
         border: #b31689;
     }
 }

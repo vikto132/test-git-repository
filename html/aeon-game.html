@@ -96,7 +96,7 @@
                     <div class="col-6 col-md-6">
                         <img src="images/aeon-game/btn-back.png" alt="" onclick="goBack()">
                     </div>
-                    <div class="col-6 col-md-6" onclick="openn()">
+                    <div class="col-6 col-md-6" data-toggle="modal" data-target="#pup-up-finish">
                         <img src="images/aeon-game/btn-send.png" alt="">
                     </div>
                 </div>
@@ -105,51 +105,51 @@
                 </div>
             </div>
         </div>
-
-        <div class="box__regis" id="pup-up-finish">
-            <!-- <img src="images/pop-up-regis/background.png" alt=""> -->
-            <div class="exit" onclick="turnOff()">
-                <div class="mdiv">
-                    <div class="md"></div>
-                </div>
-            </div>
-            <div class="container-fluid package">
-                <div class="pop-up__container">
-                    <h1>Hoàn thành</h1>
-                    <div class="pop-up__content">
-                        Bạn trả lời đúng 3/5 câu. Bạn nhận được phần quà là ...
+    </div>
+    <div class="modal fade" id="pup-up-finish" tabindex="-1" role="dialog" aria-labelledby="pup-up-finish" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="box__regis" id="pup-up-finish">
+                <div class="exit" data-dismiss="modal">
+                    <div class="mdiv">
+                        <div class="md"></div>
                     </div>
                 </div>
-                <div class="pop-up__icon__finish row">
-                    <div class="col-4">
-                        <img src="images/pop-up-finish/shopping.png" alt="">
-
-                    </div>
-                    <div class="pop-up__icon__adds col-4">
-                        <h1>
-                            Chia sẻ ngay để nhận thêm một lượt chơi
-                        </h1>
-                        <div class="row" style="
-                        width: 335px;
-                        margin-left: -55px;
-                    ">
-                            <div class="col-6">
-                                <a href=""><img src="images/pop-up-finish/facebook.png" alt=""></a>
-                            </div>
-                            <div class="col-6">
-                                <a href=""><img src="images/pop-up-finish/zalo.png" alt=""></a>
-                            </div>
+                <div class="container-fluid package">
+                    <div class="pop-up__container">
+                        <h1>Hoàn thành</h1>
+                        <div class="pop-up__content">
+                            Bạn trả lời đúng 3/5 câu. Bạn nhận được phần quà là ...
                         </div>
                     </div>
-                    <div class="pop-up__icon__bag col-4">
-                        <img src="images/pop-up-regis/bag.png" alt="">
+                    <div class="pop-up__icon__finish row">
+                        <div class="col-4">
+                            <img src="images/pop-up-finish/shopping.png" alt="">
+
+                        </div>
+                        <div class="pop-up__icon__adds col-4">
+                            <h1>
+                                Chia sẻ ngay để nhận thêm một lượt chơi
+                            </h1>
+                            <div class="row" style="
+                    width: 335px;
+                    margin-left: -55px;
+                ">
+                                <div class="col-6">
+                                    <a href=""><img src="images/pop-up-finish/facebook.png" alt=""></a>
+                                </div>
+                                <div class="col-6">
+                                    <a href=""><img src="images/pop-up-finish/zalo.png" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pop-up__icon__bag col-4">
+                            <img src="images/pop-up-regis/bag.png" alt="">
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-
     </div>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.min.js"></script>
@@ -157,15 +157,6 @@
         // $('#regis_pop-up').remove();
         function goBack() {
             window.location.href = 'index.html';
-        }
-
-        function turnOff() {
-            $('#pup-up-finish').css("display", "none");
-        }
-
-        function openn() {
-            console.log(1)
-            $('#pup-up-finish').css("display", "block");
         }
     </script>
 </body>
