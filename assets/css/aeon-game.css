@@ -195,7 +195,7 @@ img {
 
 .btn-action {
     text-align: right;
-    pointer-events: all;
+    pointer-events: auto;
 }
 
 .btn-action img {

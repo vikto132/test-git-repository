@@ -18,7 +18,7 @@ body {
     padding-top: 0.02em;
     padding-left: 0.05em;
     background-position: center;
-    /* position: relative; */
+    position: relative;
 }
 
 .container {
