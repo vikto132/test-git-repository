@@ -1,11 +1,118 @@
-.box {
-    max-width: 650px;
-    max-height: 350px;
-    border: 1px solid black;
-    margin: 0 auto;
-}
-
-.box img {
-    max-width: 650px;
-    max-height: 350px;
-}
+    * {
+        font-family: 'Oswald', sans-serif;
+    }
+    
+    .box {
+        background-image: url('../../html/images/pop-up-regis/background.png');
+        width: 653px;
+        height: 371px;
+        border: 1px solid black;
+        margin: 15vh auto;
+    }
+    
+    .exit {
+        width: 47px;
+        height: 47px;
+        background-color: #d11111;
+        border-radius: 50%;
+        position: relative;
+        right: -40vw;
+        top: -1vh;
+        padding-top: 10px;
+    }
+    
+    .mdiv {
+        height: 25px;
+        width: 2px;
+        margin-left: 23px;
+        background-color: white;
+        transform: rotate(45deg);
+        Z-index: 1;
+    }
+    
+    .md {
+        height: 25px;
+        width: 2px;
+        background-color: white;
+        transform: rotate(90deg);
+        Z-index: 2;
+    }
+    
+    .package {
+        width: 650px;
+        height: 350px;
+    }
+    
+    .pop-up__container h1 {
+        color: white;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    
+    .pop-up__container {
+        padding: 0 115px;
+        text-align: center;
+    }
+    
+    .pop-up__container input {
+        background-color: #fdbcc3;
+        width: 420px;
+        border-radius: 20px;
+        border: none;
+        margin: 15px 0;
+        padding: 5px 10px;
+    }
+    
+    .pop-up__container input:last-child {
+        margin-bottom: 0;
+    }
+    
+    .pop-up__content {
+        color: white;
+        font-size: 24px;
+        margin-top: 55px;
+    }
+    
+    .pop-up__icon {
+        align-items: flex-end;
+        text-align: center;
+    }
+    
+    .pop-up__icon__adds {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+    
+    .pop-up__icon__adds h1 {
+        font-size: 14px;
+        width: 225px;
+        margin-left: -20px;
+    }
+    
+    .pop-up__icon__bag {
+        text-align: right;
+    }
+    
+    .pop-up__icon__finish {
+        align-items: flex-end;
+        position: relative;
+        bottom: 105px;
+        color: white;
+    }
+    
+    .fa {
+        padding: 20px;
+        font-size: 30px;
+        width: 50px;
+        text-align: center;
+        text-decoration: none;
+    }
+    
+    .fa:hover {
+        opacity: 0.7;
+    }
+    
+    .fa-facebook {
+        background: #3B5998;
+        color: white;
+    }

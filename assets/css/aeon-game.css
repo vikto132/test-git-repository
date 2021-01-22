@@ -178,6 +178,7 @@ img {
     bottom: 25vh;
     display: flex;
     align-items: flex-end;
+    pointer-events: none;
 }
 
 .shopping-left img {
@@ -194,6 +195,7 @@ img {
 
 .btn-action {
     text-align: right;
+    pointer-events: all;
 }
 
 .btn-action img {
