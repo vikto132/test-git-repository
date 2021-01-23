@@ -250,15 +250,6 @@ body {
         width: 15vw;
         margin-top: 2vh
     }
-}
-
-@media(max-width: 540px) {
-    .background {
-        margin-right: -25vw;
-    }
-    .top__nav__button {
-        margin-top: 3vw;
-    }
     .top__title {
         margin-top: 20vw;
         max-width: 100%;
@@ -289,12 +280,30 @@ body {
         padding: 0;
         display: block;
     }
+    .bottom__game {
+        margin-left: 20vw;
+    }
+}
+
+@media(max-width: 540px) {
+    .background {
+        margin-right: -25vw;
+    }
+    .top__nav__button {
+        margin-top: 3vw;
+    }
     .bottom__rule__content,
     .bottom__rule__title {
         width: 100%;
     }
     .bottom__game {
         margin-top: 10vw;
+    }
+}
+
+@media(max-width:330px) {
+    .background {
+        margin-right: -100vw;
     }
 }
 
