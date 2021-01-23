@@ -92,7 +92,7 @@
     <!-- Modal -->
     <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="login" aria-hidden="true">
         <div class="modal-dialog" role="document">
-            <div class="box__regis" id="login">
+            <div class="modal-content box__regis" id="login">
                 <div class="exit" data-dismiss="modal">
                     <div class="mdiv">
                         <div class="md"></div>
@@ -102,11 +102,11 @@
                     <div class="pop-up__container">
                         <h1>Đăng Nhập</h1>
                         <form action="">
-                            <div>
+                            <!-- <div>
                                 <input type="text" placeholder="Họ và Tên">
-                            </div>
-                            <div>
-                                <input type="text" placeholder="Số điện thoại">
+                            </div> -->
+                            <div style="margin-bottom: 45px;">
+                                <input type="text" placeholder="Số điện thoại" id="phoneLogin">
                             </div>
                         </form>
                     </div>
@@ -115,7 +115,7 @@
                             <img src="images/pop-up-regis/cart.png" alt="">
 
                         </div>
-                        <div class="col-4">
+                        <div class="col-4" onmousedown="" style="cursor: pointer;">
                             <img src="images/pop-up-regis/btn_login.png" alt="">
 
                         </div>
@@ -130,13 +130,13 @@
     </div>
     <div class="modal fade" id="regis" tabindex="-1" role="dialog" aria-labelledby="regis" aria-hidden="true">
         <div class="modal-dialog" role="document">
-            <div class="box__regis" id="regis">
+
+            <div class="modal-content box__regis" id="regis">
                 <div class="exit" data-dismiss="modal">
                     <div class="mdiv">
                         <div class="md"></div>
                     </div>
                 </div>
-
                 <div class="container-fluid package">
                     <div class="pop-up__container">
                         <h1>Đăng kí</h1>
@@ -154,7 +154,7 @@
                             <img src="images/pop-up-regis/cart.png" alt="">
 
                         </div>
-                        <div class="col-4">
+                        <div class="col-4" onmousedown="regis()" style="cursor: pointer;">
                             <img src="images/pop-up-regis/btn.png" alt="">
 
                         </div>
@@ -164,6 +164,7 @@
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -199,6 +200,21 @@
 
         function playGame() {
             window.location.href = 'aeon-game.html';
+        }
+
+        function regis() {
+            console.log(1);
+            $('#messageError').html("");
+            let name = $('#nameRegis').value;
+            let phone = $('#phoneRegis').value;
+            let user = localStorage.getItem(phone);
+            if (user != null) {
+                $('#messageError').html("Số điện thoại đã tồn tại");
+            } else {
+                localStorage.setItem(phone, name);
+                $('#regis').modal('hide');
+                alert('Đăng kí thành công');
+            }
         }
     </script>
 </body>
