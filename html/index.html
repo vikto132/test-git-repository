@@ -91,7 +91,7 @@
 
     <!-- Modal -->
     <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="login" aria-hidden="true">
-        <div class="modal-dialog" role="document">
+        <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content box__regis" id="login">
                 <div class="exit" data-dismiss="modal">
                     <div class="mdiv">
@@ -115,7 +115,7 @@
                             <img src="images/pop-up-regis/cart.png" alt="">
 
                         </div>
-                        <div class="col-4" onmousedown="" style="cursor: pointer;">
+                        <div class="col-4" onmousedown="login()" style="cursor: pointer;">
                             <img src="images/pop-up-regis/btn_login.png" alt="">
 
                         </div>
@@ -129,8 +129,7 @@
         </div>
     </div>
     <div class="modal fade" id="regis" tabindex="-1" role="dialog" aria-labelledby="regis" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-
+        <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content box__regis" id="regis">
                 <div class="exit" data-dismiss="modal">
                     <div class="mdiv">
@@ -142,10 +141,10 @@
                         <h1>Đăng kí</h1>
                         <form action="">
                             <div>
-                                <input type="text" placeholder="Họ và Tên">
+                                <input type="text" placeholder="Họ và Tên" id="nameRegis">
                             </div>
                             <div>
-                                <input type="text" placeholder="Số điện thoại">
+                                <input type="text" placeholder="Số điện thoại" id="phoneRegis">
                             </div>
                         </form>
                     </div>
@@ -155,6 +154,10 @@
 
                         </div>
                         <div class="col-4" onmousedown="regis()" style="cursor: pointer;">
+                            <div id="messageError" style="margin-bottom: 25px;
+                            color: red;
+                            font-size: 19px;
+                            font-weight: bold;"></div>
                             <img src="images/pop-up-regis/btn.png" alt="">
 
                         </div>
@@ -205,9 +208,13 @@
         function regis() {
             console.log(1);
             $('#messageError').html("");
-            let name = $('#nameRegis').value;
-            let phone = $('#phoneRegis').value;
+            let name = $('#nameRegis').val();
+            let phone = $('#phoneRegis').val();
+            console.log(name);
+            console.log(phone);
+
             let user = localStorage.getItem(phone);
+            console.log(user);
             if (user != null) {
                 $('#messageError').html("Số điện thoại đã tồn tại");
             } else {
@@ -215,7 +222,24 @@
                 $('#regis').modal('hide');
                 alert('Đăng kí thành công');
             }
+            $('#nameRegis').val("");
+            $('#phoneRegis').val("");
         }
+
+        function login() {
+            let check = localStorage.getItem($('#phoneLogin'));
+            if (check != null) {
+
+            } else {
+                alert('Số điện thoại chưa đăng ký');
+            }
+            $('#login').modal('hide');
+        }
+        // $('#regis').on('show.bs.modal', function(e) {
+        $('body').addClass("example-open");
+        // }).on('hide.bs.modal', function(e) {
+        //     $('body').removeClass("example-open");
+        // })
     </script>
 </body>
 

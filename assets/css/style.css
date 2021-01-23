@@ -253,11 +253,36 @@ body {
 }
 
 @media(max-width: 540px) {
+    .background {
+        margin-right: -25vw;
+    }
+    .top__nav__button {
+        margin-top: 3vw;
+    }
     .top__title {
+        margin-top: 20vw;
         max-width: 100%;
+    }
+    .top__content {
+        margin-top: 20vw;
+    }
+    .top__content__shopping_one {
+        margin-bottom: 20vw;
+    }
+    .top__content__shopping_two {
+        margin-bottom: 20vw;
+    }
+    .middle {
+        padding-top: 10vw;
+    }
+    .middle__content {
+        padding-top: 10vw;
     }
     .middle__content img {
         margin: 30px 0;
+    }
+    .bottom {
+        margin-top: 10vw;
     }
     .bottom div {
         width: 100vw;
@@ -267,6 +292,9 @@ body {
     .bottom__rule__content,
     .bottom__rule__title {
         width: 100%;
+    }
+    .bottom__game {
+        margin-top: 10vw;
     }
 }
 
