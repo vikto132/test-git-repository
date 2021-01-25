@@ -1,0 +1,30 @@
+{
+    "data": [{
+        "id": "1",
+        "ques": "Bên trái đường có một căn nhà xanh, bên phải đường có một căn nhà đỏ. Hỏi nhà trắng ở đâu? Bên trái đường có một căn nhà xanh, bên phải đường có một căn nhà đỏ. Hỏi nhà trắng ở đâu?",
+        "ans": [
+            "Bên trái đường có một căn nhà xanh. bên phả đường có một căn nhà đỏ, hỏi nhà trắng ở đâu. Bên trái đường có một căn nhà xanh, bên phả đường có một căn nhà đỏ, hỏi nhà trắng ở đâu Bên trái đường có một căn nhà xanh, bên phả đường có m ",
+            "Bên trái đường có một căn nhà xanh, bên phả đường có một căn nhà đỏ, hỏi nhà trắng ở đâu.Bên trái đường có một căn nhà xanh, bên phả đường có một căn nhà đỏ, hỏi nhà trắng ở đâu Bên trái đường có một căn nhà xanh, bên phả đường có m ",
+            "Bên trái đường có một căn nhà xanh, bên phả đường có một căn nhà đỏ, hỏi nhà trắng ở đâu.Bên trái đường có một căn nhà xanh, bên phả đường có một căn nhà đỏ, hỏi nhà trắng ở đâu Bên trái đường có một căn nhà xanh, bên phả đường có m "
+        ],
+        "true": "1"
+    }, {
+        "id": "2",
+        "ques": "Bên trái đường có một căn nhà xanh, bên phải đường có một căn nhà đỏ. Hỏi nhà trắng ở đâu? Bên trái đường có một căn nhà xanh, bên phải đường có một căn nhà đỏ. Hỏi nhà trắng ở đâu?",
+        "ans": [
+            "Bên trái đường có một căn nhà xanh. bên phả đường có một căn nhà đỏ, hỏi nhà trắng ở đâu. Bên trái đường có một căn nhà xanh, bên phả đường có một căn nhà đỏ, hỏi nhà trắng ở đâu Bên trái đường có một căn nhà xanh, bên phả đường có m ",
+            "Bên trái đường có một căn nhà xanh, bên phả đường có một căn nhà đỏ, hỏi nhà trắng ở đâu.Bên trái đường có một căn nhà xanh, bên phả đường có một căn nhà đỏ, hỏi nhà trắng ở đâu Bên trái đường có một căn nhà xanh, bên phả đường có m ",
+            "Bên trái đường có một căn nhà xanh, bên phả đường có một căn nhà đỏ, hỏi nhà trắng ở đâu.Bên trái đường có một căn nhà xanh, bên phả đường có một căn nhà đỏ, hỏi nhà trắng ở đâu Bên trái đường có một căn nhà xanh, bên phả đường có m "
+        ],
+        "true": "2"
+    }, {
+        "id": "3",
+        "ques": "Bên trái đường có một căn nhà xanh, bên phải đường có một căn nhà đỏ. Hỏi nhà trắng ở đâu? Bên trái đường có một căn nhà xanh, bên phải đường có một căn nhà đỏ. Hỏi nhà trắng ở đâu?",
+        "ans": [
+            "Bên trái đường có một căn nhà xanh. bên phả đường có một căn nhà đỏ, hỏi nhà trắng ở đâu. Bên trái đường có một căn nhà xanh, bên phả đường có một căn nhà đỏ, hỏi nhà trắng ở đâu Bên trái đường có một căn nhà xanh, bên phả đường có m ",
+            "Bên trái đường có một căn nhà xanh, bên phả đường có một căn nhà đỏ, hỏi nhà trắng ở đâu.Bên trái đường có một căn nhà xanh, bên phả đường có một căn nhà đỏ, hỏi nhà trắng ở đâu Bên trái đường có một căn nhà xanh, bên phả đường có m ",
+            "Bên trái đường có một căn nhà xanh, bên phả đường có một căn nhà đỏ, hỏi nhà trắng ở đâu.Bên trái đường có một căn nhà xanh, bên phả đường có một căn nhà đỏ, hỏi nhà trắng ở đâu Bên trái đường có một căn nhà xanh, bên phả đường có m "
+        ],
+        "true": "3"
+    }]
+}

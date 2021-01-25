@@ -51,6 +51,17 @@ body {
     font-weight: 300;
 }
 
+.top__nav__user {
+    margin-top: 1em;
+    font-size: 24px;
+    display: none;
+}
+
+.top__nav__user a {
+    text-decoration: none;
+    color: white;
+}
+
 .btn__login,
 .btn__regis {
     background-color: transparent;
@@ -249,6 +260,12 @@ body {
     .top__nav__logo_two {
         width: 15vw;
         margin-top: 2vh
+    }
+    .top__nav__user {
+        margin-top: 3.5vw;
+    }
+    .top__nav__user a {
+        font-size: 4vw;
     }
     .top__title {
         margin-top: 20vw;

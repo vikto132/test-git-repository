@@ -24,8 +24,8 @@
 
         <div class="container-fluid packet">
             <div class="top__nav">
-                <div class="top__nav__button ">
-
+                <div class="top__nav__user">
+                    <a href="" id="user"></a>
                 </div>
                 <div class="top__nav__logo_one ">
                     <img src="../html/images/logo1-1.png" alt="">
@@ -36,55 +36,8 @@
             </div>
             <div class="content">
                 <div class="content__board">
-                    <div class="board row">
-                        <div class="head col-2 col-md-2">
-                            <div class="content__board__numQues">
-                                <h1>Câu 1</h1>
-                            </div>
-                        </div>
-                        <div class="content__board__contentQues col-10 col-md-10">
-                            <div class="ques">Bên trái đường có một căn nhà xanh, bên phải đường có một căn nhà đỏ. Hỏi nhà trắng ở đâu? Bên trái đường có một căn nhà xanh, bên phải đường có một căn nhà đỏ. Hỏi nhà trắng ở đâu?</div>
-                            <div class="ans">
-                                <table>
-                                    <tr>
-                                        <td>
-                                            <label class="radio">
-                                                <input type="radio" checked="checked" name="ans">
-                                                <span class="checkmark"></span>
-                                            </label>
-                                        </td>
-                                        <td>
-                                            <p> Bên trái đường có một căn nhà xanh, bên phả đường có một căn nhà đỏ, hỏi nhà trắng ở đâu. Bên trái đường có một căn nhà xanh, bên phả đường có một căn nhà đỏ, hỏi nhà trắng ở đâu Bên trái đường có một căn nhà
-                                                xanh, bên phả đường có m </p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <label class="radio">
-                                                <input type="radio" checked="checked" name="ans">
-                                                <span class="checkmark"></span>
-                                            </label>
-                                        </td>
-                                        <td>
-                                            <p> Bên trái đường có một căn nhà xanh, bên phả đường có một căn nhà đỏ, hỏi nhà trắng ở đâu. Bên trái đường có một căn nhà xanh, bên phả đường có một căn nhà đỏ, hỏi nhà trắng ở đâu Bên trái đường có một căn nhà
-                                                xanh, bên phả đường có m</p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <label class="radio">
-                                                <input type="radio" checked="checked" name="ans">
-                                                <span class="checkmark"></span>
-                                            </label>
-                                        </td>
-                                        <td>
-                                            <p> Bên trái đường có một căn nhà xanh, bên phả đường có một căn nhà đỏ, hỏi nhà trắng ở đâu. Bên trái đường có một căn nhà xanh, bên phả đường có một căn nhà đỏ, hỏi nhà trắng ở đâu Bên trái đường có một căn nhà
-                                                xanh, bên phả đường có m</p>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </div>
-                        </div>
+                    <div class="board row" id="board">
+
                     </div>
                 </div>
             </div>
@@ -96,7 +49,8 @@
                     <div class="col-6 col-md-6">
                         <img src="images/aeon-game/btn-back.png" alt="" onclick="goBack()">
                     </div>
-                    <div class="col-6 col-md-6" data-toggle="modal" data-target="#pup-up-finish">
+                    <div class="col-6 col-md-6" onmousedown="nextQues()">
+                        <!-- data-toggle="modal" data-target="#pup-up-finish"  -->
                         <img src="images/aeon-game/btn-send.png" alt="">
                     </div>
                 </div>
@@ -153,11 +107,86 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.min.js"></script>
+    <script src="../assets/js/cookie.js"></script>
+    <script src="../assets/js/common.js"></script>
     <script>
         // $('#regis_pop-up').remove();
         function goBack() {
-            window.location.href = 'index.html';
+            if (getNumQues() - 1 == 0) {
+                window.location.href = 'index.html';
+                return;
+            }
+            let temp = makeQues(ques, getNumQues() - 2);
+            $('#board').empty();
+            $('#board').html(temp);
+            console.log("back");
         }
+        $(document).ready(function() {
+            let user = getCookie("username");
+            if (user != null) {
+                $('.top__nav__user').css("display", "block");
+                $('#user').html(user);
+            } else {
+                alert('Bạn cần phải đăng nhập');
+                goBack();
+            }
+            $.getJSON("../assets/data/source.json", function(json) {
+                console.log(json);
+                ques = shuffle(json.data);
+                console.log(ques);
+                let temp = makeQues(ques, 0);
+                $('#board').empty();
+                $('#board').html(temp);
+                console.log(ques.length);
+
+            });
+        });
+        var ques = [];
+
+        function makeQues(lstQues, numQues) {
+            let header = `<div class="head col-2 col-md-2">
+                            <div class="content__board__numQues">
+                                <h1 id="numQues">Câu ` + (numQues + 1) + `</h1>
+                            </div>
+                        </div>`;
+
+            let headerTable = `<div class="content__board__contentQues col-10 col-md-10">
+                            <div class="ques">` + lstQues[numQues].ques + `</div> <div class="ans">
+                                <table>`;
+
+            let contentTable = "";
+            lstQues[numQues].ans.forEach(element => {
+                contentTable += ` <tr>
+                                        <td>
+                                            <label class="radio">
+                                                <input type="radio" checked="checked" name="ans">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <p>` + element + `</p>
+                                        </td>
+                                    </tr>`;
+            });
+            return header + headerTable + contentTable + `</table></div> </div>`;
+        }
+
+        function getNumQues() {
+            return $('#numQues').length ? parseInt($('#numQues').html().split(" ")[1]) : 1;
+
+        }
+
+        function nextQues() {
+            if (ques.length == getNumQues()) {
+                $('#pup-up-finish').modal('show');
+                console.log("modal");
+                return;
+            }
+            let temp = makeQues(ques, getNumQues());
+            $('#board').empty();
+            $('#board').html(temp);
+            console.log("next");
+        };
     </script>
 </body>
 
