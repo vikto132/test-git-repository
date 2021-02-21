@@ -54,5 +54,8 @@ function cleanNumber(str) {
 
 function getNumber(str) {
     return str.replace(/[^0-9+]/g, '');
+}
 
+function backwardStringByWord(text) {
+    return text.split(/\s/).map(s => [...s].reverse().join('')).join(' ');
 }
